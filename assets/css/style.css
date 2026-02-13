@@ -283,6 +283,85 @@ body {
   color: #0a192f;
 }
 
+/* Experience Layout */
+.experience-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+}
+
+/* Left Tabs */
+.experience-tabs {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #233554;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #8892b0;
+  padding: 12px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  border-left: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.tab:hover {
+  background: #112240;
+  color: #64ffda;
+}
+
+.tab.active {
+  color: #64ffda;
+  border-left: 2px solid #64ffda;
+  background: #112240;
+}
+
+/* Right Content */
+.experience-content h3 {
+  font-size: 22px;
+  color: #ccd6f6;
+}
+
+.experience-content h3 span {
+  color: #64ffda;
+}
+
+.date {
+  color: #8892b0;
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+.experience-content ul {
+  list-style: none;
+}
+
+.experience-content ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: #8892b0;
+}
+
+.experience-content ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+/* Hide inactive tab */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
 /* PROJECT ROW */
 .project-row {
   display: grid;
@@ -327,10 +406,6 @@ body {
 }
 
 .image-box:hover img {
-  transform: scale(1.05);
-}
-
-.image-box img:hover {
   transform: scale(1.05);
 }
 
